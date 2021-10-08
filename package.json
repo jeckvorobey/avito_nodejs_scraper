@@ -7,10 +7,20 @@
   "author": "Воробьев Сергей <jeckvorobey69@gmail.com>",
   "license": "MIT",
   "private": false,
+  "type": "module",
+  "scripts": {
+    "start": "babel-node main.js"
+  },
   "dependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/node": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
     "chalk": "^4.1.2",
     "cheerio": "^1.0.0-rc.10",
-    "puppeteer": "^10.4.0"
+    "htmlparser2": "^7.1.2",
+    "puppeteer": "^10.4.0",
+    "transliteration": "^2.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.13"
