@@ -1,15 +1,19 @@
-version: '3'
+version: '3.4'
 services:
   app:
-    container_name: docker-node-mongo
+    container_name: avito-app
     restart: always
     build: .
     ports:
-      - '80:3000'
+      - '8080:3000'
     external_links:
       - mongo
   mongo:
     container_name: mongo
     image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: 975B!oj579
     ports:
       - '27017:27017'

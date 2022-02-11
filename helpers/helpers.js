@@ -1,3 +1,3 @@
-export function arrayPageLength(num) {
+export const arrayPageLength = num => {
 	return Array.from(new Array(num).keys())
 }

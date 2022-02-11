@@ -1,13 +1,15 @@
-FROM node:10
+FROM node:16.10.0-alpine3.12
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
 COPY package*.json ./
+COPY yarn.lock ./
+COPY .eslintrc.json ./
 
-RUN npm install
+RUN yarn install
 
 COPY . .
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
